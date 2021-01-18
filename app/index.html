@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap jquery project</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="index.js"></script>
+</head>
+<body>
+<div class="accordion">Word Relations</div>
+<div  class="panel">
+	<div class="jumbotron text-center">
+		<h1>Type a word</h1>
+		<!-- <div class="inner-addon right-addon">
+			<i class="glyphicon glyphicon-search" id="ButtonValue"></i>
+			<input type="text" id="word" class="form-control" placeholder="Type the word" />
+		</div>--> 
+		<div class="form-group" style="width:100%; text-align:center;">
+			<div style="width:60%; float:left;">
+				<input type="word" class="form-control" id="word" placeholder="Type the word">
+			</div>
+		  <div style="width:20%; float:left;">
+			  <button type="button" class="btn btn-success" id="ButtonValue" onclick="relateDworD()">
+				  <span class="glyphicon glyphicon-search"></span> Find Relations
+			  </button>
+		  </div>
+	   </div> 
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6"><h3>Synonyms</h3>
+				<p id="textSynon"></p>
+			</div>
+			<div class="col-sm-6"><h3>Related Words</h3>
+				<p id="textRelated"></p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="accordion">Word Pronunciation</div>
+	<div class="panel">
+		<div class="container">
+			<h3>Type any word to hear its pronunciation</h3>
+			<div class="form-group" style="width:100%; text-align:center;">
+				<div style="width:60%; float:left;">
+					<input type="text" id="voiceword" class="audtext form-control" placeholder="Type any word without space"/>
+				</div>
+				<div style="width:20%; float:left;">
+					<button type="button" value="Submit" class="btn btn-success" id="ButtonVoice" onclick="geTVoice()">Submit</button>
+				</div>
+			</div>
+		</div>
+		<p>&nbsp;</p>
+		<p>
+			<audio id="player" controls autoplay>
+				<source id="audiovoice" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</p>
+	</div>
+</body>
+</html>
